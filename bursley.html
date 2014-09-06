@@ -20,12 +20,12 @@
     var dataCallback = function(data) {
       console.log("Data received", data);
       for (var i = 0; i < data.length; i++) {
-	    var d = data[i];
-		for (var k in d.data) {
-		  document.write("<i>" + k + "</i>: " + d.data[k] + "<br />");
-		}
-		document.write("<hr>");
-	  }
+      var d = data[i];
+    for (var k in d.data) {
+      document.write("<i>" + k + "</i>: " + d.data[k] + "<br />");
+    }
+    document.write("<hr>");
+    }
     }
     var doneCallback = function(data) {
       console.log("Done, all data:", data);
@@ -89,13 +89,6 @@
       }, { "data": dataCallback, "done": doneCallback });
     }
   </script>
-  <body>
-    <button onclick="QueryEquad()">East Quad</button>
-    <button onclick="QueryNquad()">North Quad </button>
-    <button onclick="QueryWquad()">West Quad</button>
-    <a href="C:\Users\mishen\Desktop\MHacks14\bursley.html">
-    	<input type="button" value = "Bursley" />
-    </a>
-    <button onclick="QueryMarkley()">Markley</button>
+  <body onload="QueryBursley()">
   </body>
 </html>
