@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap 3, from LayoutIt!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h3 class="text-center text-primary">
+				Welcome Back
+			</h3>
+			<h3 class="text-center text-primary">
+				Choose Your Location and Meal Time
+			</h3>
+			<h1></h1>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<!--  Just for spacing -->
+		<div class="col-md-2 column"> </div>
+		<!--  Spacing over -->
+		<div class="col-md-5 column">
+			<div class="btn-group btn-group-lg">
+				 <button class="btn btn-default" onclick="central()" type="button"><em class="glyphicon glyphicon-align-left"></em> Central</button> <button class="btn btn-default" onclick="hill()" type="button"><em class="glyphicon glyphicon-align-center"></em> Hill</button> <button class="btn btn-default" onclick="north()" type="button"><em class="glyphicon glyphicon-align-right"></em> North</button>
+				 <p id="location"> </p>
+			</div>
+		</div>
+		<div class="col-md-5 column">
+			<div class="btn-group btn-group-lg">
+				 <button class="btn btn-default" onclick="breakfast()" type="button"><em class="glyphicon glyphicon-align-left"></em> Breakfast</button> <button class="btn btn-default" onclick="lunch()" type="button"><em class="glyphicon glyphicon-align-center"></em> Lunch</button> <button class="btn btn-default" onclick="dinner()" type="button"><em class="glyphicon glyphicon-align-right"></em> Dinner</button>
+				 <p id ="time"> </p>
+			</div>
+		</div>
+	</div>
+	<h1></h1>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<p class="text-center text-muted">
+				Based on your preferences, location, and meal time, these dining halls will be the best for you
+			</p>
+		</div>
+	<!--  Just for spacing-->
+	</div>
+		<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h1></h1>
+		</div>
+	</div>
+	<!-- Spacing over-->
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="300x200" src="http://lorempixel.com/600/200/people">
+						<div class="caption">
+							<h3>
+								Choice 1
+							</h3>
+							<p> 
+								We chose this dining hall for you because of the following items: <br>
+								Chicken Broccoli Bake <br>
+								Salmon <br>
+								Lasagna <br>
+								Chocolate Chip Cookie <br>
+								Curly Fries <br>
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">See Full Menu</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="300x200" src="http://lorempixel.com/600/200/city">
+						<div class="caption">
+							<h3>
+								Choice 2
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">See Full Menu</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="300x200" src="http://lorempixel.com/600/200/sports">
+						<div class="caption">
+							<h3>
+								Choice 3
+							</h3>
+							<p>
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#">See Full Menu</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var breakfast_bool = 0; 
+	var lunch_bool = 0; 
+	var dinner_bool = 0;
+	var central_bool = 0;
+	var hill_bool = 0;
+	var north_bool = 0;
+	function breakfast() {
+		breakfast_bool = 1;
+		lunch_bool = 0;
+		dinner_bool=0;
+		document.getElementById("time").innerHTML = "You chose Breakfast!";
+	}
+	function lunch() {
+		breakfast_bool = 0;
+		lunch_bool = 1;
+		dinner_bool=0;
+		document.getElementById("time").innerHTML = "You chose Lunch!";
+	}
+	function dinner() {
+		breakfast_bool = 0;
+		lunch_bool = 0;
+		dinner_bool= 1;
+		document.getElementById("time").innerHTML = "You chose Dinner!";
+	}
+	function central() {
+		central_bool = 1;
+		hill_bool = 0;
+		north_bool = 0;
+		document.getElementById("location").innerHTML = "You chose Central!";
+	}
+	function hill() {
+		central_bool = 0;
+		hill_bool = 1;
+		north_bool = 0;
+		document.getElementById("location").innerHTML = "You chose Hill!";
+	}
+	function north() {
+		central_bool = 0;
+		hill_bool = 0;
+		north_bool = 1;
+		document.getElementById("location").innerHTML = "You chose North!";
+	}
+</script>
+
+
+</body>
+</html>
